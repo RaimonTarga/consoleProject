@@ -4,42 +4,55 @@ body{
 
 .console-container{
     background-color: rgb(8, 8, 8);
-    width: 100%;
-    height: 100%;
+    width: 97vw;
+    height: 97vh;
     display: grid;
-    grid-template-columns: repeat(20, fr) min-content;
-    grid-template-rows: repeat(20, 1.5em) min-content;
+    grid-template-columns: repeat(20, minmax(0, 1fr)) min-content;
+    /* minmax(0, 1fr) properly makes it so the elements stop changing their size */
+    grid-template-rows: repeat(20, 1fr) min-content;
 }
 
 .console-output{
-    grid-row: 1 / 18;
-    grid-column: 1 / 16;
-    display: flex;
+    grid-row: 1 / 20;
+    grid-column: 1 / 18;
+    display: inline-block;
     align-items: bottom left;
     flex-direction: column;
     margin-top: auto;
+    overflow-y: auto;
     max-height: 100%;
-    overflow: auto;
 }
 
 .console-element{
     color: white;
     font-size: 20px;
+    overflow-wrap: break-word;
 }
 
 .side-tab {
     background-color: rgb(14, 14, 14);
-    grid-row: 1 / 18;
-    grid-column: 16 / 20;
+    grid-row: 1 / 20;
+    grid-column: 18 / 21;
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.tab-category{
+    background-color: rgb(59, 59, 59);
+    margin-bottom: 5px;
+    padding: 5px;
+    width: 85%;
+    text-align: center;
+    color: white;
 }
 
 .tab-element{
     background-color: rgb(34, 34, 34);
-    margin-top: 5px;
+    margin-bottom: 5px;
     padding: 5px;
     border-radius: 5px;
     width: 75%;
@@ -51,20 +64,45 @@ body{
     background-color: rgb(92, 92, 92) !important;
 }
 
-.input-container{
-    grid-row: 18;
-    grid-column: 1 / 20;
+.selected{
+    background-color: rgb(92, 92, 92) !important;
+}
 
+.input-container{
+    grid-row: 20;
+    grid-column: 1 / 21;
+    display: flex;
 }
 
 .console-input{
-    width: 82%;
+    width: 100%;
     background-color: rgb(14, 14, 14);
     color: white;
 }
 
 .submit-button{
+    width: 17.5%;
     background-color: rgb(14, 14, 14);
     color: white;
-    width: 15%;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(29, 29, 29); 
+    border-radius: 2px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(3, 3, 3); 
+    border-radius: 2px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(29, 29, 29); 
+  }
