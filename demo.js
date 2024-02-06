@@ -78,7 +78,7 @@ function processInput(text){
                 startExercise(8);
             break;
             case "ejercicio 9":
-                animateOutput("Crea una aplicación que nos cuente el número de cifras de un número entero positivo (hay que confirmar que no haya introducido un número negativo y deberemos quitar los decimales) pedido por teclado. Crea un método que realice esta acción: pasando elnúmero por parámetro, devolverá el número de cifras.", "red");
+                animateOutput("Crea una aplicación que nos cuente el número de cifras de un número entero positivo (hay que confirmar que no haya introducido un número negativo y deberemos quitar los decimales) pedido por teclado. Crea un método que realice esta acción: pasando el número por parámetro, devolverá el número de cifras.", "red");
                 startExercise(9);
             break;
             case "ejercicio 10":
@@ -94,6 +94,85 @@ function processInput(text){
                 animateOutput("Escribe una función a la que le pasamos un año y devuelve true si es bisiesto. En el programa principal, pídele al usuario un número y muestra en pantalla “El año … es bisiesto” o “El año … no es bisiesto” y sigue pidiendo números y diciendo si es o no bisiesto hasta que introduzca un 0.","red");
                 startExercise(12);
             break;
+            case "ejercicio 13":
+                animateOutput("Escribe un programa que pregunte al usuario su edad. Mostrar en pantalla “Feliz cumpleaños” repetido tantas veces como años tenga.","red");
+                startExercise(13);
+            break;
+            case "ejercicio 14":
+                animateOutput("Crear un programa que muestre el valor de sumar todos los números desde 1 hasta el número que introduzca el usuario.","red");
+                startExercise(14);
+            break;
+            case "ejercicio 15":
+                animateOutput("Mostrar en pantalla los números del 10 al 20 (incluidos los dos) con una línea vacía entre ellos.","red");
+                startExercise(15);
+                ejercicioQuinze();
+                finishExercise();
+            break;
+            case "ejercicio 16":
+                animateOutput("Escribe un programa que pida 10 valores. Al final mostrar la media de esos valores.","red");
+                startExercise(16);
+            break;
+            case "ejercicio 17":
+                animateOutput("Escribe un programa que muestre el resultado de sumar todos los números del 1 hasta el número introducido y que vuelva a pedirle al usuario otro número hasta que el usuario introduzca un 0.","red");
+                startExercise(17);
+            break;
+            case "ejercicio 18":
+                animateOutput("Un número factorial es el resultado de multiplicar todos los números de 1 a ese mismo número (por ejemplo el factorial de 4 es 1 x 2 x 3 x 4 = 24). Haz un programa que muestre los números del 1 al 10 en una columna con el resultado de su factorial en la columna de al lado.","red");
+                startExercise(18);
+                ejercicioDieciocho();
+                finishExercise();
+            break;
+            case "ejercicio 19":
+                animateOutput("Escribe un programa que pida valores. Si introduce un valor negativo, mostrar un mensaje diciendo que se ignoran los valores negativos.Seguir pidiendo hasta que el usuario introduzca un 0, entonces mostrar la suma de los valores introducidos.","red");
+                startExercise(19);
+            break;
+            case "ejercicio 20":
+                animateOutput("Escribe un programa que muestre todos los valores pares o impares entre 1 y 100 dependiendo de si el usuario introduce P o I . Si introduce otra cosa, decir que ese valor no es correcto y pedirle otra vez.","red");
+                startExercise(20);
+            break;
+            case "ejercicio 21":
+                animateOutput("Escribe un programa que muestre los números de 1 a 12 en una columna. En la columna de al lado de los números impares mostrar el cuadrado de ese valor y en la de los pares mostrar el cubo.","red");
+                startExercise(21);
+                ejercicioVeintiuno();
+                finishExercise();
+            break;
+            case "ejercicio 22":
+                animateOutput("Realiza un programa que muestre por pantalla los números del 1 al 100 sin mostrar aquellos números múltiplos de 5.","red");
+                startExercise(22);
+                ejercicioVeintidos();
+                finishExercise();
+            break;
+            case "ejercicio 23":
+                animateOutput("Escribe un programa que muestre el número entero positivo que el usuario introduzca pero al revés (si introduce 1478 que muestre 8741), hasta que el usuario introduzca 0. Si introduce 0 la primera vez, debería mostrarlo al revés (es decir, mostrar 0) y acabar el programa.","red");
+                startExercise(23);
+            break;
+            case "ejercicio 24":
+                animateOutput("Escribe un programa que pida un número de 3 dígitos y muestre el resultado de sumar sus dígitos.","red");
+                startExercise(24);
+            break;
+            case "ejercicio 25":
+                animateOutput("Se desea conocer el lucky number (número de la suerte) de cualquier persona. El número de la suerte se consigue reduciendo la fecha de nacimiento a un número de un solo dígito.","red");
+                animateOutput("Sintaxis: <u>dd-mm-yyyy</u>","blue");
+                startExercise(25);
+            break;
+            case "ejercicio 26":
+                animateOutput("14. Pedir al usuario un número. Mostrar en pantalla el dibujo con tantas líneas como las que haya introducido","red");
+                startExercise(26);
+            break;
+            case "ejercicio 27":
+                animateOutput("Escribe un programa el cual analizará si la contraseña introducida es correcta o no. Para que la contraseña sea correcta deberá cumplir estas directivas:<br>● Debe tener 8 caracteres como mínimo.<br>● La contraseña deberá contener números.<br>● La primera letra tiene que ser en mayúsculas.","red");
+                startExercise(27);
+            break;
+            case "ejercicio 28":
+                animateOutput("Escribe un programa que te indique la fecha del día siguiente a la que el usuario haya introducido por teclado. Habrá que verificar que la fecha introducida es correcta.","red");
+                animateOutput("Sintaxis: <u>MM/DD/YYYY</u>","blue");
+                startExercise(28);
+            break;
+            case "ejercicio 29":
+                animateOutput("Mostrar en pantalla una pirámide hecha con un símbolo. El usuario introduce el símbolo que se usa y un valor que indica la altura en líneas de la pirámide.","red");
+                animateOutput("Sintaxis: <u>-simbolo-</u><u>-numero</u> (ejemplo: #7)","blue");
+                startExercise(29);
+            break;
         }
     }
     //force scroll of consoleOutput to the bottom
@@ -103,7 +182,7 @@ function processInput(text){
 function processCurrentExercise(input){
     switch (currentExercise){
         case 1:
-            
+            //no input
         break;
         case 2:
             ejercicioDos(input);
@@ -172,21 +251,21 @@ function processCurrentExercise(input){
                 switch(savedInput[0]){
                     case "circulo":
                     case "cuadrado":
+                        //two inputs
                         if (savedInput.length < 2){
                             savedInput.push(input);
                         }
                         if (savedInput.length == 2) {
-                            animateOutput("calculating " + savedInput[0] + " " + savedInput[1],"blue");
                             ejercicioDiez(savedInput);
                             finishExercise();
                         }
                     break;
                     case "triangulo":
+                        //three inputs
                         if (savedInput.length < 3){
                             savedInput.push(input);
                         }
                         if (savedInput.length == 3) {
-                            animateOutput("calculating " + savedInput[0] + " " + savedInput[1] + " "+ savedInput[2],"blue");
                             ejercicioDiez(savedInput);
                             finishExercise();
                         }
@@ -203,9 +282,106 @@ function processCurrentExercise(input){
             finishExercise();
         break;
         case 12:
-            
-            if (Number(input) == 0 ) finishExercise();
+            if (Number(input) == 0) finishExercise();
             else ejercicioDoce(input);
+        break;
+        case 13:
+            if (!isNaN(input)) ejercicioTrece(input);
+            else animateOutput("Error: el numero no es valido","red");
+            finishExercise();
+        break;
+        case 14:
+            if (!isNaN(input)) ejercicioCatorze(input);
+            else animateOutput("Error: el numero no es valido","red");
+            finishExercise();
+        break;
+        case 15:
+            //no input
+        break;
+        case 16:
+            //10 inputs
+            if (savedInput.length < 10 && !isNaN(input)){
+                savedInput.push(input);
+            }
+            else animateOutput("Error: el numero no es valido","red");
+            if (savedInput.length == 10) {
+                ejercicioDieciseis(savedInput);
+                finishExercise();
+            }
+        break;
+        case 17:
+            if (!isNaN(input)){
+                if (input == 0) finishExercise();
+                else ejercicioDiecisiete(input);
+            } 
+            else animateOutput("Error: el numero no es valido","red");
+        break;
+        case 18:
+            //no input
+        break;
+        case 19:
+            if (Number(input) >= 0){
+                if (Number(input) == 0){
+                    ejercicioDiezinueve(savedInput);
+                    finishExercise();
+                }
+                else savedInput.push(input);
+            } 
+            else animateOutput("Error: el numero no puede ser negativo","red");
+            
+        break;
+        case 20:
+            if (input == "P" || input == "I") {
+                ejercicioVeinte(input);
+                finishExercise();
+            }
+            else animateOutput("Error: el input debe ser P o I","red");
+        break;
+        case 21:
+            //no input
+        break;
+        case 22:
+            //no input
+        break;
+        case 23:
+            if (Number(input) >= 0){
+                ejercicioVeintitres(input);
+                if (Number(input) == 0) finishExercise();
+            } 
+            else animateOutput("Error: el numero no puede ser negativo","red");
+        break;
+        case 24:
+            if (input.length == 3 && !isNaN(input)){
+                ejercicioVeinticuatro(input);
+            }
+            else animateOutput("Error: el numero no es valido","red");
+            finishExercise();
+        break;
+        case 25:
+            if (input.split("-").length == 3){
+                ejercicioVeinticinco(input);
+            }
+            else animateOutput("Error: la fecha no es valida","red");
+            finishExercise();
+        break;
+        case 26:
+            if (!isNaN(input)){
+                ejercicioVeintiseis(input)
+            }
+            else animateOutput("Error: el numero no es valido","red");
+            finishExercise();
+        break;
+        case 27:
+            ejercicioVentisiete(input);
+            finishExercise();
+        break;
+        case 28:
+            ejercicioVeintiocho(input);
+            finishExercise();
+        break;
+        case 29:
+            ejercicioVeintinueve(input);
+            finishExercise();
         break;
     }
 }
@@ -240,7 +416,7 @@ function clearConsole(){
     while (consoleOutput.firstChild) consoleOutput.removeChild(consoleOutput.lastChild);
 }
 
-function selectExerciseByClick(evt, exercise) {
+function selectExerciseByClick(evt, exercise){
     finishExercise();
     evt.currentTarget.className += " selected";
     processInput(exercise);
@@ -289,14 +465,14 @@ function ejercicioDos(input){
 }
 
 function ejercicioTres(input){
-    const suma = Number(input[0]) + Number(input[1]);
-    animateOutput("La suma de " + input[0] + " y " + input[1] + " es " + suma, "green");
+    const valorSuma = Number(input[0]) + Number(input[1]);
+    animateOutput("La suma de " + input[0] + " y " + input[1] + " es " + valorSuma, "green");
 }
 function ejercicioCuatro(input){
     const valorUno = Number(input[0]);
     const valorDos = Number(input[1]);
-    const suma = suma(valorUno,valorDos);
-    animateOutput("La suma de " + valorUno + " y " + valorDos + " es " + suma, "green");
+    const valorSuma = suma(valorUno,valorDos);
+    animateOutput("La suma de " + valorUno + " y " + valorDos + " es " + valorSuma, "green");
 }
 
 function suma(valorUno, valorDos){
@@ -354,7 +530,7 @@ function ejercicioNueve(input){
 
 function numeroCifras(valor){
     if (valor == 0) return 0;
-    else return 1 + numeroCifras((valor/10));
+    else return 1 + numeroCifras(Math.floor(valor/10));
 }
 
 function ejercicioDiez(input){
@@ -422,6 +598,204 @@ function ejercicioDoce(input){
     else animateOutput("El año " + input + " no es bisiesto", "green");
 }
 
-function esBisiesto(ano){
-    return (((ano % 4 == 0) && !(ano % 100 == 0)) || (ano % 400 == 0));
+function esBisiesto(year){
+    return (((year % 4 == 0) && !(year % 100 == 0)) || (year % 400 == 0));
+}
+
+/* Ejercicios bucles optativos */
+
+function ejercicioTrece(input){
+    const numeroVeces = Number(input);
+    for (let i = 0; i < numeroVeces; i++){
+        animateOutput("Feliz cumpleaños" , "green");
+    }
+}
+
+function ejercicioCatorze(input){
+    const numero = Number(input);
+    let sum = numero;
+    for(let i = numero-1; i > 0; i--){
+        sum += i;
+    }
+    animateOutput("La suma de los numeros es " + sum , "green");
+}
+
+function ejercicioQuinze(){
+    let output = "";
+    for (let i = 10; i <= 20; i++){
+        output = output.concat(i + " ");
+    }
+    animateOutput(output,"green");
+}
+
+function ejercicioDieciseis(input){
+    let media = 0;
+    for (let i = 0; i < input.length; i++){
+        media += Number(input[i]);
+    }
+    media /= input.length;
+    animateOutput("La media de los numeros es " + media,"green");
+}
+
+function ejercicioDiecisiete(input){
+    const numero = Number(input);
+    let sumaValores = numero;
+    for (let i = 1; i < numero; i++){
+        sumaValores += i;
+    }
+    animateOutput("La suma de los numeros es " + sumaValores,"green");
+}
+
+function ejercicioDieciocho(){
+    let output = "";
+    for (let i = 1; i <= 10; i++){
+        let valorFactorial = i;
+        for (let j = 1; j < i; j++){
+            valorFactorial *= j; 
+        }
+        output = output.concat(i + ": factorial :" + valorFactorial + "<br>")
+    }
+    animateOutput(output,"green");
+}
+
+function ejercicioDiezinueve(input){
+    let sumaValores = 0;
+    for (let i = 0; i < input.length; i++){
+        sumaValores += Number(input[i]);
+    }
+    animateOutput("La suma de los numeros es " + sumaValores,"green");
+}
+
+function ejercicioVeinte(input){
+    let output = "";
+    const pares = (input == "P");
+    for (let i = 1; i <= 100; i++){
+        if (i % 2 == 0 && pares){
+            output = output.concat(i + " ")
+        }
+        if (i % 2 == 1 && !pares){
+            output = output.concat(i + " ")
+        }
+    }
+    animateOutput(output,"green");
+}
+
+function ejercicioVeintiuno(){
+    let output = "";
+    for (let i = 1; i <= 12; i++){
+        let valor = i;
+        if (i % 2 == 0) valor *= valor*valor;
+        else valor *= valor;
+        output = output.concat(i + ": " + valor + "<br>")
+    }
+    animateOutput(output,"green");
+}
+
+function ejercicioVeintidos(){
+    let output = "";
+    for (let i = 1; i <= 100; i++){
+        if (i % 5 != 0) output = output.concat(i + " ");
+    }
+    animateOutput(output,"green");
+}
+
+function ejercicioVeintitres(input){
+    let output = "";
+    for (let i = input.length-1; i >= 0 ; i--){
+        output = output.concat(input.charAt(i));
+    }
+    animateOutput(output,"green");
+}
+
+function ejercicioVeinticuatro(input){
+    let sumaValores = 0;
+    for (let i = 0; i < input.length; i++){
+        sumaValores += Number(input.charAt(i));
+    }
+    animateOutput("La suma de los numeros es " + sumaValores,"green");
+}
+
+function ejercicioVeinticinco(input){
+    let partes = input.split("-");
+    let sumaValores = 0;
+    //first sum
+    for (let i = 0; i < partes.length; i++){
+        let numeroParte = Number(partes[i]);
+        while (numeroParte > 0){
+            sumaValores += numeroParte%10;
+            numeroParte = Math.floor(numeroParte/10);
+        }
+    }
+    //sum until we only have one digit left
+    while(sumaValores > 10){
+        let valor = 0;
+        while (sumaValores > 0){
+            valor += sumaValores%10;
+            sumaValores = Math.floor(sumaValores/10);
+        }
+        sumaValores = valor;
+    }
+    animateOutput("Tu numero de la suerte es " + sumaValores , "green");
+}
+
+function ejercicioVeintiseis(input){
+    let numero = Number(input);
+    let output = "";
+    for (let i = 1; i <= numero; i++){
+        for (let j = 0; j < i; j++){
+            output = output.concat("*");
+        }
+        output = output.concat("<br>");
+    }
+    animateOutput(output, "green");
+}
+
+function ejercicioVentisiete(input){
+    let tieneNumero = false;
+    let tieneMayuscula = false;
+    if (input.length >= 8){
+        for (let i = 0; i < input.length; i++){
+            let letra = input.charAt(i);
+            if (letra >= 'A' && letra <= 'Z') tieneMayuscula = true;
+            if (letra >= '0' && letra <= '9') tieneNumero = true;
+        }
+        if (!tieneNumero) animateOutput("Error: la contraseña no tiene numeros","red");
+        if (!tieneMayuscula) animateOutput("Error: la contraseña no tiene mayusculas","red");
+        if (tieneNumero && tieneMayuscula) animateOutput("la contraseña cumple los requisitos","green");
+    }
+    else animateOutput("Error: la contraseña es demasiado corta","red");
+}
+
+function ejercicioVeintiocho(input){
+    let fecha = new Date(input);
+    if (!isNaN(fecha)){
+        fecha.setDate(fecha.getDate() + 1);
+        animateOutput("La fecha del dia siguiente es:<br>" + fecha , "green");
+    }
+    else {
+        animateOutput("Error: La fecha no es valida","red");
+    }
+}
+
+function ejercicioVeintinueve(input){
+    if (input.length == 2){
+        const simbolo = input[0];
+        const numero = Number(input[1]);
+        let output = "";
+        for (let i = 1; i < numero*2; i+=2){
+            for (let j = i; j > 0; j--){
+                output = output.concat(" ");
+            }
+            for (let k = i + 1; k < (i*2 + 1); k++){
+                output = output.concat(simbolo);
+            }
+            output = output.concat(i + "<br>");
+        }
+        animateOutput(output,"green");
+        //evil hack to make the output figure display properly (don't do this at home)
+        consoleOutput.lastChild.style = "text-justify: none; text-align:center;";
+    }
+    else {
+        animateOutput("Error: El valor de entrada no es valido","red");
+    }
 }
